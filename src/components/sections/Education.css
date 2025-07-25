@@ -1,0 +1,31 @@
+/* src/components/sections/education.css */
+
+/* container for shine effect */
+.shine-container {
+  position: relative;
+}
+
+/* a thin gradient stripe that moves with the tilt */
+.shine {
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    60deg,
+    rgba(255,255,255,0.2) 0%,
+    rgba(255,255,255,0)   60%,
+    rgba(255,255,255,0.2) 100%
+  );
+  transform: translate(0, 0) rotate(25deg);
+  pointer-events: none;
+  mix-blend-mode: screen;
+  transition: all 0.5s ease;
+  z-index: 1;
+}
+
+/* as Tilt changes transform, we nudge the shine */
+.shine-container:hover .shine {
+  transform: translate(30%, 30%) rotate(25deg);
+}

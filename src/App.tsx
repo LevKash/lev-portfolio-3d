@@ -1,16 +1,18 @@
+// src/App.tsx
 import { BrowserRouter } from "react-router-dom";
-
 import {
   About,
+  Education,
   Contact,
   Experience,
-  Feedbacks,
   Hero,
   Navbar,
-  Tech,
   Works,
   StarsCanvas,
 } from "./components";
+import DownloadCV from "./components/DownloadCV";
+// remove Feedbacks import, add Certificates:
+import Certificates from "./components/sections/Certificates";
 import { useEffect } from "react";
 import { config } from "./constants/config";
 
@@ -28,13 +30,30 @@ const App = () => {
           <Navbar />
           <Hero />
         </div>
+        {/* Floating Download CV button*/}
+        <DownloadCV />
+        {/* About Me */}
         <About />
+
+        {/* NEW Education block */}
+        <Education />
+
+        {/* Work Experience */}
         <Experience />
-        <Tech />
+
+        
+
+        {/* Projects */}
         <Works />
-        <Feedbacks />
+
+        {/* Certifications (replaces Testimonials) */}
+        <Certificates />
+
         <div className="relative z-0">
+          {/* Contact Links */}
           <Contact />
+
+          {/* Stars background */}
           <StarsCanvas />
         </div>
       </div>

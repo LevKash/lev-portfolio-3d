@@ -30,3 +30,4 @@ export {
   ComputersCanvas,
   StarsCanvas,
 };
+export { default as Education } from "./sections/Education";
