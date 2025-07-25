@@ -1,8 +1,8 @@
 {
-  "homepage": "https://levkash.github.io/lev-portfolio-3d",
   "name": "lev-portfolio-3d",
-  "private": true,
   "version": "1.0.0",
+  "private": false,
+  "homepage": "https://levkash.github.io/lev-portfolio-3d",
   "type": "module",
   "scripts": {
     "dev": "vite",
