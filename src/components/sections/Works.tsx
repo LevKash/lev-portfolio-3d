@@ -1,4 +1,5 @@
 // src/components/sections/Works.tsx
+
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { caseStudies, TCaseStudy } from "../../constants/caseStudies";
@@ -25,7 +26,9 @@ const Works: React.FC = () => {
   // prevent background scroll when modal is open
   useEffect(() => {
     document.body.style.overflow = openIdx !== null ? "hidden" : "";
-    return () => { document.body.style.overflow = ""; };
+    return () => {
+      document.body.style.overflow = "";
+    };
   }, [openIdx]);
 
   return (
@@ -48,10 +51,8 @@ const Works: React.FC = () => {
           {/* 3‑column grid */}
           <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
             {caseStudies.map((cs: TCaseStudy, i: number) => {
-              // pick a custom thumbnail for the first two cases:
-              let thumbSrc = cs.images[0];
-              if (i === 0) thumbSrc = cs.images[2];    // Binance → Thessaloniki team
-              if (i === 1) thumbSrc = cs.images[1];    // Boroume → the cart
+              // default thumbnail is the first image
+              const thumbSrc = cs.images[0];
 
               return (
                 <motion.div

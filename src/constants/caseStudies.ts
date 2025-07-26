@@ -4,91 +4,103 @@ export interface TCaseStudy {
   title:       string;
   date:        string;
   summary:     string;
-  images:      string[];
+  images:      string[];         // imported assets
   challenge:   string;
   action:      string;
   result:      string;
 }
 
-// 1) BINANCE VOLUNTEER MEETUPS (Athens & Thessaloniki)
-import CZMeetup    from "../assets/case-studies/BinanceAthensMeetupCZ.jpg";
-import ATHenTeam   from "../assets/case-studies/BinanceAthensMeetupTeam.jpg";
-import THessTeam   from "../assets/case-studies/BinanceThessalonikiTeam.jpg";
-import THessLogo   from "../assets/case-studies/BinanceThessaloniki.png";
+// ---- Import all case study images ----
+import DissertationImg    from "../assets/case-studies/aiz-strat.png";
+import DissertationStats  from "../assets/case-studies/aiz-link.png";
+import BinanceAthensCZ    from "../assets/case-studies/BinanceAthensMeetupCZ.jpg";
+import BinanceAthensTeam  from "../assets/case-studies/BinanceAthensMeetupTeam.jpg";
+import BinanceThessTeam   from "../assets/case-studies/BinanceThessalonikiTeam.jpg";
+import BinanceThessLogo   from "../assets/case-studies/BinanceThessaloniki.png";
+import BoroumeDonationCart from "../assets/case-studies/BoroumeCart.png";
+import BoroumeDonationBoxes from "../assets/case-studies/BoroumeBoxes.png";
+import UniBinanceTeam     from "../assets/case-studies/UniOfYorkBinanceTeam.jpg";
+import UniBinanceBanner   from "../assets/case-studies/UniOfYorkBinance.jpg";
+import ConferenceDummy     from "../assets/case-studies/dummy1.png";
+import KaspiDummy         from "../assets/case-studies/dummy2.png";
 
-// 2) BOROUME FOOD DRIVE
-import BoroumeBoxes from "../assets/case-studies/BoroumeBoxes.png";
-import BoroumeCart  from "../assets/case-studies/BoroumeCart.png";
-
-// 3) UNI OF YORK / BINANCE ACADEMY LAUNCH
-import UniYorkTeam   from "../assets/case-studies/UniOfYorkBinanceTeam.jpg";
-import UniYorkBanner from "../assets/case-studies/UniOfYorkBinance.jpg";
-
-// 4) Supporting University Online Conference (placeholder for now)
-import Dummy1        from "../assets/case-studies/dummy1.png";
-
-// 5) Managing Online Sales on Kaspi.kz (placeholder for now)
-import Dummy2        from "../assets/case-studies/dummy2.png";
-
+// ---- Unified case studies list ----
 export const caseStudies: TCaseStudy[] = [
   {
-    title:     "Volunteer Support at Binance Meetups",
-    date:      "Nov 2022 & Mar 2023",
-    summary:   "Streamline check‑in & setup for Athens & Thessaloniki events.",
-    images:    [CZMeetup, ATHenTeam, THessTeam, THessLogo],
+    title:   "Digital Strategy for Alexander Innovation Zone",
+    date:    "Dec 2024 – Jun 2025",
+    summary: "Practical dissertation: digital & social media strategy for AIZ.",
+    images:  [DissertationImg, DissertationStats],
     challenge:
-      "Streamline participant check‑in and on‑site setup for two offline Binance community events.",
+      "Develop a digital & social media strategy to engage academia, industry, government, and civil society in the Alexander Innovation Zone.",
     action:
-      "Scanned QR codes and registered up to 80 attendees in under 15 minutes per event; arranged staging (tables, microphones, projection equipment); guided guests through event schedules and venue layout.",
+      "Conducted stakeholder research, digital audits, and campaign design using Meta Business Suite, Canva, Google Ads, and SEO tools; crafted content aligned with the Quadruple Helix model; presented to AIZ leadership.",
     result:
-      "Reduced average check‑in wait time to 30 seconds (from ~3 minutes) and earned positive feedback on event organization and flow.",
+      "Strategy approved and partly implemented, spawning new partnerships and revenue; publicly praised by AIZ and academic supervisor on LinkedIn.",
   },
   {
-    title:     "Volunteer Food Drive with Boroume",
-    date:      "May 2024",
-    summary:   "Collect & distribute food donations with Boroume.",
-    images:    [BoroumeBoxes, BoroumeCart],
+    title:   "Volunteer Support at Binance Meetups",
+    date:    "Nov 2022 & Mar 2023",
+    summary: "Streamlined check‑in & setup for Athens & Thessaloniki events.",
+    images:  [
+      BinanceThessTeam,
+      BinanceAthensCZ,
+      BinanceAthensTeam,
+      BinanceThessLogo
+    ],
     challenge:
-      "Organize the collection and distribution of food donations for vulnerable families in Thessaloniki, in partnership with Boroume.",
+      "Optimize participant check‑in and venue logistics for two Binance community meetups.",
     action:
-      "Assembled an 8‑person volunteer team; partnered with three local market stalls to place donation bins; managed logistics for collection, storage, and distribution through a community center.",
+      "Scanned QR codes and registered 80+ attendees in under 15 minutes; arranged staging, A/V equipment, and guest flow.",
     result:
-      "Collected 120 kg of food over a few hours and delivered donations to 60 families; received a formal thank‑you letter from Boroume.",
+      "Reduced check‑in wait times from 3 minutes to under 1 minute; received strong positive feedback.",
   },
   {
-    title:     "Launching Binance Academy at University",
-    date:      "Apr 2023",
-    summary:   "Kick‑off on‑campus Binance Academy lectures.",
-    images:    [UniYorkTeam, UniYorkBanner],
+    title:   "Volunteer Food Drive with Boroume Foundation",
+    date:    "May 2024",
+    summary: "Collect & distribute 120 kg of food donations.",
+    images:  [BoroumeDonationCart, BoroumeDonationBoxes],
     challenge:
-      "Drive student awareness of Binance Academy and introduce crypto education on campus.",
+      "Coordinate collection and delivery of food for vulnerable families in Thessaloniki.",
     action:
-      "Secured agreement from the Binance Greece director and team to deliver an on‑campus lecture; coordinated venue logistics for a 100‑seat auditorium; scheduled the event and promoted via student chats and social media; built and managed registration through a Google Form, sending reminders and tracking sign‑ups.",
+      "Led an 8‑person team; partnered with local markets for donation bins; managed storage and distribution.",
     result:
-      "45 students attended (50 % of auditorium capacity), and 90 % of attendees rated the lecture as “Excellent” in post‑event feedback.",
+      "Delivered to 60 families; earned a formal thank‑you from Boroume.",
   },
   {
-    title:     "Supporting University Online Conference",
-    date:      "May 2022",
-    summary:   "Seamless participant experience & certificates.",
-    images:    [Dummy1],
+    title:   "Launching Binance Academy at University of York",
+    date:    "Apr 2023",
+    summary: "Kick‑off on‑campus Binance Academy lectures.",
+    images:  [UniBinanceTeam, UniBinanceBanner],
     challenge:
-      "Ensure seamless participant experience and timely issuance of certificates for a student‑focused academic conference.",
+      "Drive student awareness and attendance for Binance Academy lectures.",
     action:
-      "Managed Zoom registration (120 sign‑ups) and setup; prepared and emailed 110 digital certificates within 24 hours post‑event; moderated chat and resolved technical queries in real time.",
+      "Secured approval from Binance Greece leadership; managed venue setup, promotion, and registration via Google Forms.",
     result:
-      "Achieved 100 % certificate delivery within 24 hours with zero access complaints; organizers praised support as “best in two years.”",
+      "45 students attended (50% capacity); 90% rated the session “Excellent.”",    
   },
   {
-    title:     "Managing Online Sales on Kaspi.kz",
-    date:      "May 2021 – Jun 2022",
-    summary:   "Scale product listings & inventory control.",
-    images:    [Dummy2],
+    title:   "Supporting University Online Conference",
+    date:    "May 2022",
+    summary: "Seamless virtual conference experience & certification.",
+    images:  [ConferenceDummy],
     challenge:
-      "Increase daily order volume from 2–3 to a sustainable level on Kaspi.kz, where listings lacked systematic management.",
+      "Ensure smooth registration, streaming, and certificate issuance for 120+ participants.",
     action:
-      "Created and published 300 product listings with optimized descriptions, images, and pricing; implemented daily order tracking per listing; expanded to Wildberries, Halyk Market, Jusan Market, and Forte Market under unified inventory control; applied dynamic pricing strategies including discounts and bundle offers.",
+      "Managed Zoom setup, chat moderation, and issued 110 certificates within 24 hours.",
     result:
-      "Daily orders rose to ~10 per day (+230 %). Orders reverted to 2–3 per day after departure, underscoring my direct impact.",
+      "Zero access complaints; 100% on‑time certificate delivery; praised as “best in two years.”",    
+  },
+  {
+    title:   "Managing Online Sales on Kaspi.kz & Partner Marketplaces",
+    date:    "May 2021 – Jun 2022",
+    summary: "Scaled from 2–3 to 10 orders/day.",
+    images:  [KaspiDummy],
+    challenge:
+      "Increase daily order volume by systematizing product listings.",
+    action:
+      "Published 300 optimized listings; tracked performance; expanded to multiple marketplaces and applied dynamic pricing.",
+    result:
+      "Achieved +230% order growth; maintained performance for duration of role.",    
   },
 ];
